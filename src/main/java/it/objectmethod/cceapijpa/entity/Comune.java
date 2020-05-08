@@ -1,11 +1,14 @@
 package it.objectmethod.cceapijpa.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table(name = "comune")
 public class Comune {
-
+	@Id
 	@Column(name = "istat")
 	private int istat;
 	@Column(name = "nome")

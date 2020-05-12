@@ -22,7 +22,7 @@ import it.objectmethod.cceapijpa.repo.ClienteRepo;
 public class ClienteController {
 
 	@Autowired
-	ClienteRepo cliRepo;
+	private ClienteRepo cliRepo;
 
 	@GetMapping("/list")
 	public ResponseEntity<List<Cliente>> getAll() {

@@ -3,15 +3,16 @@ package it.objectmethod.cceapijpa.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "cliente")
 public class Cliente {
-	@GeneratedValue
 	@Id
-	private Integer id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 
 	@Column(name = "ragione_sociale")
 	private String ragioneSociale;
@@ -79,11 +80,11 @@ public class Cliente {
 	@Column(name = "email")
 	private String email;
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
